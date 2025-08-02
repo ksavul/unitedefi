@@ -1,0 +1,33 @@
+# Navigate to your actual UNITEDEFI folder
+cd ~/hashkdev/UNITEDEFI
+
+# Create the comprehensive .gitignore
+cat > .gitignore << 'EOF'
+# CRITICAL - Never commit these
+.env
+.env.local
+.env.*.local
+private.key
+secrets/
+
+# Node
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+._*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Build/Test
+coverage/
+dist/
+cache/
+artifacts/
+*.log
+EOF
